@@ -45,7 +45,7 @@ exports.LineMessAPI = functions.region(region).runWith(spec).https.onRequest((re
 
 const LINE_HEADER = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer {hHP4XSADzTbtcGybvA4C4y/s62Ti5cQIR1DEcVw1MSsuKeJUcnfyBF6lkBjphWtV5u2df/z7t+B7XLUm5zUM3TdT3vAymGOeYHqWuIHiDjQ5ngasmbM7DAHz5KcK4H8/z2QU71y9mkGhtxPL6ZxX/QdB04t89/1O/w1cDnyilFU=}"
+    "Authorization": "Bearer {'Your channel access token'}"
   }
 
 function reply_message(replytoken,textfrom){
