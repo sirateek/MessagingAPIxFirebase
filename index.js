@@ -2,7 +2,6 @@ const functions = require('firebase-functions');
 const request = require('request');
 const region = 'asia-east2';
 const spec = {
-  timeoutSeconds: 4,
   memory: "1GB"
   };
 
@@ -32,8 +31,7 @@ exports.LineMessAPI = functions.region(region).runWith(spec).https.onRequest((re
           var name = returnData.data().name
           var surname = returnData.data().surname
           var nickname = returnData.data().nickname
-            
-            reply_message(replyToken, `Hello ${nickname}(${name} ${surname})`)
+          reply_message(replyToken, `Hello ${nickname}(${name} ${surname})`)
         } else {
           reply_message(replyToken, "You are not the customer, Register?")
         }
